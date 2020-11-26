@@ -37,17 +37,13 @@
 
         <TextView
             android:id="@+id/back"
+            style="@style/back"
             android:layout_width="42dp"
             android:layout_height="16dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="48dp"
             android:alpha="0.5"
-            android:fontFamily="sans-serif"
-            android:gravity="center_horizontal|center_vertical"
-            android:lineSpacingExtra="2sp"
             android:text="@string/back"
-            android:textColor="@color/white"
-            android:textSize="12sp"
             app:drawableStartCompat="@drawable/ic_path"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toTopOf="parent" />
@@ -56,18 +52,14 @@
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="226dp"
+            android:layout_marginTop="154dp"
             android:width="24dp"
             android:height="24dp"
             android:alpha=".9"
-            android:background="@drawable/rectangle"
-            android:fontFamily="sans-serif"
-            android:gravity="center_vertical"
             android:text="@string/age"
-            android:textColor="@color/white"
-            android:textSize="12sp"
+            style = "@style/age"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/back" />
 
         <TextView
             android:id="@+id/name"
@@ -75,13 +67,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="487dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center_vertical"
-            android:includeFontPadding="false"
-            style="@style/shadow"
+            style="@style/name"
             android:text="@string/name"
-            android:textColor="@color/text_whitish"
-            android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -92,11 +79,8 @@
             android:layout_width="0dp"
             android:layout_height="20dp"
             android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif"
-            android:includeFontPadding="false"
+            style="@style/genre"
             android:text="@string/genre"
-            android:textColor="@color/text_reddish"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -155,24 +139,19 @@
             android:layout_height="20dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif"
             android:text="@string/reviews"
-            android:textColor="@color/text_grey"
-            android:textSize="14sp"
+            style = "@style/reviews"
             app:layout_constraintStart_toEndOf="@+id/star5"
             app:layout_constraintTop_toBottomOf="@+id/genre" />
 
         <TextView
             android:id="@+id/storyline"
+            style="@style/middle_heading"
             android:layout_width="343dp"
             android:layout_height="17dp"
             android:layout_marginTop="28dp"
-            android:fontFamily="sans-serif"
-            android:includeFontPadding="false"
-            style="@style/shadow"
+            android:fontFamily="@font/roboto_black_font"
             android:text="@string/storyline"
-            android:textColor="@color/text_whitish"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/star1" />
 
@@ -181,30 +160,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:alpha="0.75"
-            android:fontFamily="sans-serif"
-            android:gravity="center_vertical"
-            android:includeFontPadding="false"
+            style = "@style/description"
             android:text="@string/description"
-            android:textColor="@color/white"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/storyline" />
 
         <TextView
             android:id="@+id/cast"
-            android:layout_width="343dp"
+            android:layout_width="0dp"
             android:layout_height="17dp"
             android:layout_marginTop="24dp"
-            android:fontFamily="sans-serif"
-            android:includeFontPadding="false"
-            android:shadowColor="#80000000"
-            android:shadowDx="0"
-            android:shadowDy="6"
-            android:shadowRadius="12"
+            style="@style/middle_heading"
             android:text="@string/cast"
-            android:textColor="@color/text_whitish"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/description" />
 
@@ -265,6 +233,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/robert_downey_jr"
+
             style="@style/actor_name"
             app:layout_constraintEnd_toStartOf="@id/barrier_1"
             app:layout_constraintStart_toStartOf="@+id/actor_img_1"
