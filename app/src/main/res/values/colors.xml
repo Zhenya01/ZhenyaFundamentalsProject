@@ -6,7 +6,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_opac_0.5">#80FFFFFF</color>
+    <color name="white_opac_0.75">#BFFFFFFF</color>
+    <color name="white_opac_0.9">#E6FFFFFF</color>
     <color name="background">#191926</color>
     <color name="text_whitish">#ECECEC</color>
     <color name="text_reddish">#FF3466</color>
