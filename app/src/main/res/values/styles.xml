@@ -4,7 +4,7 @@
         <item name="android:textColor">@color/actors_grey</item>
         <item name="android:fontFamily">@font/roboto_black_font</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:layout_marginTop">6dp</item>
+
     </style>
 
     <style name="TextViewMiddleHeading">
@@ -20,7 +20,7 @@
     </style>
 
     <style name="TextVIewFilmName">
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">@dimen/text_40</item>
         <item name="android:fontFamily">@font/roboto_black_font</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">@color/text_whitish</item>
@@ -33,7 +33,7 @@
     </style>
 
     <style name="TextViewBack">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">@dimen/text_12</item>
         <item name="android:textColor">@color/white_opac_0.5</item>
         <item name="android:fontFamily">@font/roboto_light_font</item>
         <item name="android:gravity">center_horizontal</item>
@@ -45,14 +45,14 @@
         <item name="android:fontFamily">@font/roboto_black_font</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:background">@drawable/rectangle</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">@dimen/text_12</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
     <style name="TextViewGenre">
         <item name="android:textColor">@color/text_reddish</item>
         <item name="android:fontFamily">@font/roboto_light_font</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/text_12</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:lineSpacingExtra">4sp</item>
     </style>
@@ -60,7 +60,7 @@
     <style name="TextViewReviewsCounter">
         <item name="android:textColor">@color/text_grey</item>
         <item name="android:fontFamily">@font/roboto_black_font</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/text_14</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:lineSpacingExtra">4sp</item>
     </style>
@@ -68,7 +68,7 @@
     <style name="TextViewFilmDescription">
         <item name="android:textColor">@color/white_opac_0.75</item>
         <item name="android:fontFamily">@font/roboto_light_font</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/text_14</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:lineSpacingExtra">4sp</item>

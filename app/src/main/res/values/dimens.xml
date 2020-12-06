@@ -2,12 +2,14 @@
 <resources>
     <dimen name="full_size">0dp</dimen>
     <dimen name="basic_margin">16dp</dimen>
-    <dimen name="back_btn_left_margin">2dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
     <dimen name="eight_dp_margin">8dp</dimen>
-    <dimen name="back_btn_top_margin">48dp</dimen>
-    <dimen name="age_dimen">24dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
     <dimen name="four_dp_margin">4dp</dimen>
-    <dimen name="rating_star_left_margin">3dp</dimen>
-    <dimen name="storyline_top_margin">24dp</dimen>
-    <dimen name="actor_name_top_margin">6dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
 </resources>
