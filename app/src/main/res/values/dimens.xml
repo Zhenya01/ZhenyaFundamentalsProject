@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="full_size">0dp</dimen>
+    <dimen name="basic_margin">16dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="eight_dp_margin">8dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="four_dp_margin">4dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+</resources>
