@@ -44,8 +44,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="@dimen/full_size"
             app:layout_constraintTop_toTopOf="@id/background"
             app:layout_constraintBottom_toBottomOf="@id/background"
             app:layout_constraintStart_toStartOf="@id/background"
@@ -57,6 +57,7 @@
             android:id="@+id/back"
             style="@style/TextViewBack"
             android:layout_width="wrap_content"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_2"
             android:layout_marginTop="@dimen/margin_48"
@@ -69,18 +70,14 @@
         <TextView
             android:id="@+id/age"
             style="@style/TextViewAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/eight_dp_margin"
-            android:width="@dimen/dimen_24"
-            android:height="@dimen/dimen_24"
             android:text="@string/age"
             app:layout_constraintBottom_toTopOf="@+id/name"
             app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
         <TextView
             android:id="@+id/name"
-            style="@style/TextVIewFilmName"
+            style="@style/TextViewFilmName"
             android:layout_width="@dimen/full_size"
             android:layout_height="wrap_content"
             android:text="@string/name"

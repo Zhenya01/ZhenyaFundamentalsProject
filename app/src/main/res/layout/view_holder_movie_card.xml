@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movieCard"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#191926">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background">
+
+        <ImageView
+            android:id="@+id/card_poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/movie"
+            android:contentDescription="@string/avengers_end_game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:layout_width="@dimen/full_size"
+            android:layout_height="@dimen/full_size"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toBottomOf="@id/card_poster"
+            app:layout_constraintEnd_toEndOf="@id/card_poster"
+            app:layout_constraintStart_toStartOf="@id/card_poster"
+            app:layout_constraintTop_toTopOf="@id/card_poster"/>
+
+        <TextView
+            android:id="@+id/card_age"
+            style="@style/TextViewAge"
+            android:layout_marginTop="@dimen/margin_6"
+            android:text="@string/age"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_card"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_11"
+            android:src="@drawable/like"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right_card"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_genre"
+            style="@style/TextViewGenre.Small"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_182"
+            android:text="@string/genre"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right_card"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_card"
+            app:layout_constraintTop_toBottomOf="@+id/card_age" />
+
+        <com.github.ornolfr.ratingview.RatingView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp_margin"
+            app:drawable_empty="@drawable/ic_star_empty"
+            app:drawable_filled="@drawable/ic_star_full"
+            app:drawable_half="@drawable/ic_star_half"
+            app:drawable_margin="2dp"
+            app:drawable_size="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_card"
+            app:layout_constraintTop_toBottomOf="@+id/card_genre"
+            app:max_count="5"
+            app:rating="3.5" />
+
+        <TextView
+            style="@style/TextViewReviewsCounter.Small"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp_margin"
+            android:layout_marginTop="@dimen/margin_2"
+            android:text="@string/reviews"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right_card"
+            app:layout_constraintStart_toEndOf="@+id/rating"
+            app:layout_constraintTop_toBottomOf="@+id/card_genre" />
+
+        <TextView
+            android:id="@+id/card_film_name"
+            style="@style/TextViewFilmName.Small"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eight_dp_margin"
+            android:text="@string/avengers_end_game"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right_card"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_card"
+            app:layout_constraintTop_toBottomOf="@+id/card_poster" />
+
+        <TextView
+            style="@style/TextViewDuration"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom_card"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right_card"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_card"
+            app:layout_constraintTop_toBottomOf="@+id/card_film_name" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="8dp" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
