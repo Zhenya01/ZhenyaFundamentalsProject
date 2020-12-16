@@ -1,6 +1,6 @@
 package com.zhenya.zhenyaFundamentalsProject
 
-interface ClickListener {
+interface ClickListenerInterface {
     fun backBtnPressed()
     fun movieCardPressed()
 }

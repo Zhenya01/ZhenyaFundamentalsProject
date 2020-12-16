@@ -2,13 +2,12 @@ package com.zhenya.zhenyaFundamentalsProject
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
-
+import androidx.fragment.app.Fragment
 
 
 private var movie: CardView? = null
@@ -17,7 +16,7 @@ private var movie: CardView? = null
 
 class MoviesListFragment : Fragment() {
 
-    private var clickListener: ClickListener? = null
+    private var clickListener: ClickListenerInterface? = null
 
 
     override fun onCreateView(
@@ -30,8 +29,8 @@ class MoviesListFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (activity is ClickListener) {
-            this.clickListener = activity as ClickListener
+        if (activity is ClickListenerInterface) {
+            this.clickListener = activity as ClickListenerInterface
         }
     }
     override fun onDetach() {
@@ -44,6 +43,8 @@ class MoviesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val movie = view.findViewById<CardView>(R.id.movieCard)
+        val like = movie.findViewById<ImageView>(R.id.like)
+        /*like.drawable.setTint(Color.parseColor("#FF0000"))*/
         movie.setOnClickListener { clickListener?.movieCardPressed() }
 
     }
