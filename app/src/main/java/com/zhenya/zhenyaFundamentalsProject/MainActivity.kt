@@ -1,13 +1,9 @@
 package com.zhenya.zhenyaFundamentalsProject
 
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import androidx.cardview.widget.CardView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(), ClickListener {
+class MainActivity : AppCompatActivity(), ClickListenerInterface {
     private val moviesList = MoviesListFragment()
     private val movieDetails = MovieDetailsFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,28 +11,23 @@ class MainActivity : AppCompatActivity(), ClickListener {
         setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .apply {
-                    add(R.id.fragments_container, moviesList)
-                    commit()
-                }
+                    .apply {
+                        add(R.id.fragments_container, moviesList)
+                        commit()
+                    }
         }
-
     }
 
-    override fun backBtnPressed(){
+    override fun backBtnPressed() {
         supportFragmentManager.popBackStack()
     }
+
     override fun movieCardPressed() {
         supportFragmentManager.beginTransaction()
-            .apply {
-                add(R.id.fragments_container, movieDetails)
-                addToBackStack("movieDetails")
-                commit()
-            }
+                .apply {
+                    add(R.id.fragments_container, movieDetails)
+                    addToBackStack("movieDetails")
+                    commit()
+                }
     }
-
-    /*fun goToMovies(context: Context){
-        val nextIntent = Intent(context, MovieDetailsActivity::class.java)
-        startActivity(nextIntent)
-    }*/
 }

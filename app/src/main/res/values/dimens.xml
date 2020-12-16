@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="full_size">0dp</dimen>
-    <dimen name="basic_margin">16dp</dimen>
     <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="four_dp_margin">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
     <dimen name="eight_dp_margin">8dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="margin_11">11dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="basic_margin">16dp</dimen>
     <dimen name="margin_48">48dp</dimen>
     <dimen name="dimen_24">24dp</dimen>
-    <dimen name="four_dp_margin">4dp</dimen>
-    <dimen name="margin_3">3dp</dimen>
-    <dimen name="margin_6">6dp</dimen>
-    <dimen name="text_40">40sp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_182">182dp</dimen>
+
+
+    <dimen name="text_2">2sp</dimen>
+    <dimen name="text_4">4sp</dimen>
+    <dimen name="text_3">3sp</dimen>
+    <dimen name="text_8">8sp</dimen>
     <dimen name="text_12">12sp</dimen>
     <dimen name="text_14">14sp</dimen>
-    <dimen name="margin_11">11dp</dimen>
-    <dimen name="margin_182">182dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+
+
 </resources>

@@ -5,23 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 
-
-private var movie: CardView? = null
-
-
-
 class MoviesListFragment : Fragment() {
 
-    private var clickListener: ClickListenerInterface? = null
+    private var clickListenerInterface: ClickListenerInterface? = null
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_movies_list, container, false)
@@ -29,13 +23,16 @@ class MoviesListFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (activity is ClickListenerInterface) {
-            this.clickListener = activity as ClickListenerInterface
+
+        if (activity !is ClickListenerInterface) {
+            throw Exception("Activity doesn't implement ClickListener")
         }
+        this.clickListenerInterface = activity as ClickListenerInterface
     }
+
     override fun onDetach() {
         super.onDetach()
-        clickListener = null
+        clickListenerInterface = null
     }
 
 
@@ -43,9 +40,7 @@ class MoviesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val movie = view.findViewById<CardView>(R.id.movieCard)
-        val like = movie.findViewById<ImageView>(R.id.like)
-        /*like.drawable.setTint(Color.parseColor("#FF0000"))*/
-        movie.setOnClickListener { clickListener?.movieCardPressed() }
+        movie.setOnClickListener { clickListenerInterface?.movieCardPressed() }
 
     }
 
