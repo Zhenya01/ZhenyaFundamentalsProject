@@ -2,18 +2,11 @@ package com.zhenya.zhenyaFundamentalsProject
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.cardview.widget.CardView
-
-
-
-private var movie: CardView? = null
-
-
+import androidx.fragment.app.Fragment
 
 class MoviesListFragment : Fragment() {
 
@@ -21,8 +14,8 @@ class MoviesListFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_movies_list, container, false)
@@ -32,8 +25,11 @@ class MoviesListFragment : Fragment() {
         super.onAttach(context)
         if (activity is ClickListener) {
             this.clickListener = activity as ClickListener
+        } else {
+            throw Exception("Activity doesn't implement ClickListener")
         }
     }
+
     override fun onDetach() {
         super.onDetach()
         clickListener = null

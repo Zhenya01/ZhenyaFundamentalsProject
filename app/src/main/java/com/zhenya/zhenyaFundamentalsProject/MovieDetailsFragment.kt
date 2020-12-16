@@ -2,22 +2,21 @@ package com.zhenya.zhenyaFundamentalsProject
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 
 
 class MovieDetailsFragment : Fragment() {
 
-    private var clickListener:ClickListener? = null
+    private var clickListener: ClickListener? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_movie_details, container, false)
     }
 
@@ -25,8 +24,11 @@ class MovieDetailsFragment : Fragment() {
         super.onAttach(context)
         if (activity is ClickListener) {
             this.clickListener = activity as ClickListener
+        } else {
+            throw Exception("Activity doesn't implement ClickListener")
         }
     }
+
     override fun onDetach() {
         super.onDetach()
         clickListener = null
@@ -39,9 +41,6 @@ class MovieDetailsFragment : Fragment() {
             clickListener?.backBtnPressed()
         }
     }
-
-
-
 
 
 }
