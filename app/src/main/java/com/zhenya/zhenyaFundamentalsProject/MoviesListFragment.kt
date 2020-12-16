@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 
 class MoviesListFragment : Fragment() {
 
-    private var clickListener: ClickListener? = null
+    private var clickListenerInterface: ClickListenerInterface? = null
 
 
     override fun onCreateView(
@@ -23,16 +23,16 @@ class MoviesListFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (activity is ClickListener) {
-            this.clickListener = activity as ClickListener
-        } else {
+
+        if (activity !is ClickListenerInterface) {
             throw Exception("Activity doesn't implement ClickListener")
         }
+        this.clickListenerInterface = activity as ClickListenerInterface
     }
 
     override fun onDetach() {
         super.onDetach()
-        clickListener = null
+        clickListenerInterface = null
     }
 
 
@@ -40,7 +40,7 @@ class MoviesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val movie = view.findViewById<CardView>(R.id.movieCard)
-        movie.setOnClickListener { clickListener?.movieCardPressed() }
+        movie.setOnClickListener { clickListenerInterface?.movieCardPressed() }
 
     }
 

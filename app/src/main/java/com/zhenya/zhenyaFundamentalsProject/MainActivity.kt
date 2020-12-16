@@ -3,7 +3,7 @@ package com.zhenya.zhenyaFundamentalsProject
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(), ClickListener {
+class MainActivity : AppCompatActivity(), ClickListenerInterface {
     private val moviesList = MoviesListFragment()
     private val movieDetails = MovieDetailsFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
