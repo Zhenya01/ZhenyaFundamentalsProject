@@ -1,21 +1,33 @@
 package com.zhenya.zhenyaFundamentalsProject
 
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ClickListenerInterface {
+    private val moviesList = MoviesListFragment()
+    private val movieDetails = MovieDetailsFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val textView = findViewById<TextView>(R.id.textView)
-        textView.setOnClickListener { goToMovies(this) }
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                    .apply {
+                        add(R.id.fragments_container, moviesList)
+                        commit()
+                    }
+        }
     }
 
-    fun goToMovies(context: Context){
-        val nextIntent = Intent(context, MovieDetailsActivity::class.java)
-        startActivity(nextIntent)
+    override fun backBtnPressed() {
+        supportFragmentManager.popBackStack()
+    }
+
+    override fun movieCardPressed() {
+        supportFragmentManager.beginTransaction()
+                .apply {
+                    add(R.id.fragments_container, movieDetails)
+                    addToBackStack("movieDetails")
+                    commit()
+                }
     }
 }
