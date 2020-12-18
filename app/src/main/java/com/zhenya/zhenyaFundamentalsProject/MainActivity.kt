@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity(), ClickListenerInterface {
     private val moviesList = MoviesListFragment()
     private val movieDetails = MovieDetailsFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

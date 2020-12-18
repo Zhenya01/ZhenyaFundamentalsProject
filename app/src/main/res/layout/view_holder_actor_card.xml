@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/actor_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/robert_downey_jr"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/downey_jr" />
+
+    <TextView
+        android:id="@+id/actor_name"
+        style="@style/TextViewActorName"
+        android:layout_width="@dimen/full_size"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/basic_margin"
+        android:text="@string/robert_downey_jr"
+        app:layout_constraintEnd_toEndOf="@id/actor_img"
+        app:layout_constraintStart_toStartOf="@+id/actor_img"
+        app:layout_constraintTop_toBottomOf="@+id/actor_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
