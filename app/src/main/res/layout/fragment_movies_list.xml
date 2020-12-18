@@ -26,15 +26,28 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <include
-            android:id="@+id/movieCard"
-            layout="@layout/view_holder_movie_card"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movies_list"
+            android:layout_width="@dimen/full_size"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_32"
+            app:layout_constraintEnd_toStartOf="@id/list_guideline_right"
+            app:layout_constraintStart_toEndOf="@id/list_guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/moviesList" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/list_guideline_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_12"
-            android:layout_marginTop="@dimen/margin_32"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moviesList" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_12" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/list_guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

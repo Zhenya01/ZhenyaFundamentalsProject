@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 
 class MovieDetailsFragment : Fragment() {
@@ -39,7 +41,25 @@ class MovieDetailsFragment : Fragment() {
         backButton.setOnClickListener {
             clickListenerInterface?.backBtnPressed()
         }
+
+        val actorsList = listOf(
+                Actor("Robert Downey Jr.", R.drawable.downey_jr),
+                Actor("Cris Evans", R.drawable.evans),
+                Actor("Mark Ruffalo", R.drawable.ruffalo),
+                Actor("Chris Hemsworth", R.drawable.hemsworth)
+        )
+
+
+        val actorsRecycler = view.findViewById<RecyclerView>(R.id.actors_recycler)
+        val adapter = ActorsListAdapter(context, actorsList)
+        actorsRecycler.adapter = adapter
+        actorsRecycler.layoutManager = object : LinearLayoutManager(context, RecyclerView.HORIZONTAL, false) {
+            override fun checkLayoutParams(lp: RecyclerView.LayoutParams): Boolean {
+                // force height of viewHolder here, this will override layout_height from xml
+                lp.width = (width / 4) - 3 * 8
+                return true
+            }
+        }
+        actorsRecycler.addItemDecoration(ActorsItemDecorator(resources, actorsList.size))
     }
-
-
 }
